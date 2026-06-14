@@ -232,162 +232,116 @@ All decimal values must be formatted to **exactly 2 decimal places**.
 
 ## Sample Input and Output
 
-### Test 1 — one rectangle
+Here is the formatted content optimized for a GitHub repository **README.md**. It utilizes clean markdown components, code blocks, and clear hierarchies to make the grading criteria easy for students to read.
 
-**Input**
-```
-1
+---
+
+```markdown
+## ⚙️ Autograding Test Suites
+
+This assignment is automatically graded out of **5 marks** using GitHub Classroom Input/Output tests. Below are the exact test configurations and sample cases used to evaluate your submission.
+
+---
+
+### 🧪 Test Case 1: Simple Mix Test (5 Marks)
+This test case passes exactly **1 Rectangle** and **1 Circle** to verify that both subclasses, text formatting, and explicit downcasting logic work correctly.
+
+* **Test Name:** `Mix Shapes Test`
+* **Setup Command:** `javac shapes/Shape.java shapes/Rectangle.java shapes/Circle.java shapes/ShapeMain.java`
+* **Run Command:** `java shapes.ShapeMain`
+* **Comparison Type:** `Exact match`
+* **Total Points:** `5`
+
+#### Expected Console Interaction
+
+**📥 Sample Input:**
+```text
+2
 RECTANGLE
 Red true
-5.0 8.0
+4.0 5.0
+CIRCLE
+Blue false
+3.0
+
 ```
 
-**Output**
-```
+**📤 Expected Output:**
+
+```text
 [ Rectangle ]
 Color : Red
 Filled: Yes
-Width : 5.0
-Length: 8.0
-Area      : 40.00
-Perimeter : 26.00
+Width : 4.0
+Length: 5.0
+Area      : 20.00
+Perimeter : 18.00
 
-```
-
----
-
-### Test 2 — one circle
-
-**Input**
-```
-1
-CIRCLE
-Blue false
-7.0
-```
-
-**Output**
-```
 [ Circle ]
 Color : Blue
 Filled: No
-Radius: 7.0
-Area         : 153.94
-Circumference: 43.98
+Radius: 3.0
+Area         : 28.27
+Circumference: 18.85
+
+--- Downcast Check ---
+Rectangle width=4.0 length=5.0
+Circle radius=3.0
 
 ```
 
 ---
 
-### Test 3 — mixed shapes
+### 🧪 Test Case 2: Alternate Parameters Test (5 Marks)
 
-**Input**
-```
-3
-RECTANGLE
-Green true
-4.0 9.0
+This case tests dynamic variable tracking and ensures decimal values round correctly according to your `String.format()` structures.
+
+* **Test Name:** `Dynamic Math Test`
+* **Setup Command:** `javac shapes/Shape.java shapes/Rectangle.java shapes/Circle.java shapes/ShapeMain.java`
+* **Run Command:** `java shapes.ShapeMain`
+* **Comparison Type:** `Exact match`
+* **Total Points:** `5`
+
+#### Expected Console Interaction
+
+**📥 Sample Input:**
+
+```text
+2
 CIRCLE
-Yellow false
-3.5
+Green true
+1.5
 RECTANGLE
-Black false
-10.0 2.5
+Yellow false
+2.5 3.5
+
 ```
 
-**Output**
-```
-[ Rectangle ]
+**📤 Expected Output:**
+
+```text
+[ Circle ]
 Color : Green
 Filled: Yes
-Width : 4.0
-Length: 9.0
-Area      : 36.00
-Perimeter : 26.00
+Radius: 1.5
+Area         : 7.07
+Circumference: 9.42
 
-[ Circle ]
+[ Rectangle ]
 Color : Yellow
 Filled: No
-Radius: 3.5
-Area         : 38.48
-Circumference: 21.99
+Width : 2.5
+Length: 3.5
+Area      : 8.75
+Perimeter : 12.00
 
-[ Rectangle ]
-Color : Black
-Filled: No
-Width : 10.0
-Length: 2.5
-Area      : 25.00
-Perimeter : 25.00
+--- Downcast Check ---
+Circle radius=1.5
+Rectangle width=2.5 length=3.5
 
 ```
 
----
-
-### Test 4 — downcasting check (rectangle-only run)
-
-**Input**
 ```
-2
-RECTANGLE
-White true
-6.0 6.0
-RECTANGLE
-Purple false
-1.5 12.0
-```
-
-**Output**
-```
-[ Rectangle ]
-Color : White
-Filled: Yes
-Width : 6.0
-Length: 6.0
-Area      : 36.00
-Perimeter : 24.00
-
-[ Rectangle ]
-Color : Purple
-Filled: No
-Width : 1.5
-Length: 12.0
-Area      : 18.00
-Perimeter : 27.00
-
-```
-
----
-
-### Test 5 — large values
-
-**Input**
-```
-2
-CIRCLE
-Orange true
-100.0
-RECTANGLE
-Gray true
-999.9 888.8
-```
-
-**Output**
-```
-[ Circle ]
-Color : Orange
-Filled: Yes
-Radius: 100.0
-Area         : 31415.93
-Circumference: 628.32
-
-[ Rectangle ]
-Color : Gray
-Filled: Yes
-Width : 999.9
-Length: 888.8
-Area      : 888711.12
-Perimeter : 3777.40
 
 ```
 
